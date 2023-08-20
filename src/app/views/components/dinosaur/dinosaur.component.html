@@ -1,0 +1,11 @@
+<div id="container">
+  <div class="d-flex justify-content-center mb-3">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="dinosaurToggle" [checked]="showDinosaur$ | async" (change)="toggleDinosaur()">
+      <label class="form-check-label" for="dinosaurToggle">Dinosaur</label>
+    </div>
+  </div>
+  <div class="mt-12 justify-content-center" *ngIf="showDinosaur$ | async">
+    <iframe src="https://wayou.github.io/t-rex-runner/" scrolling="no"></iframe>
+  </div>
+</div>

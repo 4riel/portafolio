@@ -1,0 +1,46 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="home p-1 rounded">
+    <ul class="navbar-nav">
+      <li class="nav-item p-1 rounded">
+        <a class="nav-link smooth-scroll" href="#">Ariel</a>
+      </li>
+    </ul>
+  </div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngFor="let route of routeService.routes">
+        <a
+          class="nav-link"
+          [routerLink]="route.path"
+          [class.active-link]="routeService.isActive(route.path)"
+          >{{route.label}}<i *ngIf="route.icon" class="fa fa-{{ route.icon }}"></i></a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://www.linkedin.com/in/arielmarti/"
+          target="_blank"
+          ><i class="fa fa-linkedin"></i> LinkedIn</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/4riel" target="_blank"
+          ><i class="fa fa-github"></i> GitHub</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

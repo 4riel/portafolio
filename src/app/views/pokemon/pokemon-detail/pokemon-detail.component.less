@@ -1,0 +1,54 @@
+.pokemon-card {
+  min-height: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.badge {
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .pokemon-card {
+      min-height: 200px;  /* adjust as needed */
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card {
+      min-height: 250px;  /* adjust as needed */
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card {
+      min-height: 337px;  /* adjust as needed */
+  }
+}

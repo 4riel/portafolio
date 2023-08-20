@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="section mb-5">
+    <h1>Pokemon Search</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <input
+        type="text"
+        (input)="onSearch(getValue($event))"
+        class="form-control form-control-lg"
+        placeholder="Got a pokemon's name? Type it here!"
+      />
+    </div>
+  </div>
+  <div *ngIf="pokeSearch" class="d-flex justify-content-center mb-3">
+    <app-pokemon-detail  [pokemon]="pokeSearch"></app-pokemon-detail>
+
+  </div>
+
+  <div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="loadMore()"
+  >
+  <div class="pokemon-results container mt-4">
+    <div class="row">
+      <div
+        class="col-12 col-sm-6 col-md-4 col-lg-3"
+        *ngFor="let pokemon of pokemons"
+      >
+        <app-pokemon-detail [pokemonSimpleInfo]="pokemon"></app-pokemon-detail>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  
+</div>

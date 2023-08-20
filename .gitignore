@@ -1,0 +1,7 @@
+*.pack
+*.old
+.angular/cache/*
+.editorconfig
+.vscode/*
+node_modules/*
+dist/*

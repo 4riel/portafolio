@@ -1,0 +1,14 @@
+<div class="container section mb-5">
+  <h1>Skills & Expertise</h1>
+
+  <div class="skills-section row text-center">
+      <div *ngFor="let skillGroup of skills" class="skill-group col-4">
+        <h4>{{skillGroup.category}}</h4>
+        <ul class="skills-list">
+          <li *ngFor="let item of skillGroup.items">
+            <span class="skill-item"><i class="fa fa-check-circle"></i> {{item}}</span>
+          </li>
+        </ul>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div *ngIf="pokemon" class="card pokemon-card mb-4" [@fadeIn]>
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img
+        [src]="pokemon?.sprites?.front_default"
+        alt="{{ pokemon?.name }}"
+        class="card-img-top pokemon-image"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-capitalize">
+          #{{ pokemon?.id }} {{ pokemon?.name }}
+        </h5>
+        <p class="card-text">
+          <strong>Experience:</strong> {{ pokemon?.base_experience }}<br />
+          <strong>Height:</strong> {{ pokemon?.height }}<br />
+          <strong>Weight:</strong> {{ pokemon?.weight }}
+        </p>
+
+        <strong>Types:</strong>
+        <span class="badge bg-success" *ngFor="let type of pokemon.types">{{type.type.name }}</span>
+        <br />
+
+        <strong>Abilities:</strong>
+        <span class="badge bg-danger" *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>
