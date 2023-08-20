@@ -8,7 +8,7 @@
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
     "lint": "nx lint",
-    "deploy": "ng build --configuration production --aot --base-href \"https://4riel.github.io/portafolio/\""
+    "deploy": "ng build --configuration production --aot --base-href \"https://4riel.github.io/portafolio/\" && npx angular-cli-ghpages --dir=dist/portafolio"
   },
   "private": true,
   "dependencies": {
