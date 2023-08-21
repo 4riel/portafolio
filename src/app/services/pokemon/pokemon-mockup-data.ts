@@ -35,7 +35,7 @@ export const POKEMON_MOCKUP_DATA: Pokemon = {
         }
     ],
     sprites: {
-        front_default: '../../../assets/images/ariel.png',
+        front_default: 'assets/images/ariel.png',
         front_shiny: 'assets/pokejoker-with-golden-hat.jpg',
         back_default: 'assets/pokejoker-showing-his-back-tattoo.jpg',
         back_shiny: 'assets/pokejoker-showing-his-shiny-back-tattoo.jpg'
